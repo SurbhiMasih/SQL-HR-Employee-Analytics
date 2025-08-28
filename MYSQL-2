@@ -1,0 +1,31 @@
+CREATE DATABASE hr_employee_analytics;
+USE hr_employee_analytics;
+
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    salary DECIMAL(10 , 2 ),
+    hire_date DATE,
+    attrition VARCHAR(10),
+    performance_score INT
+);
+INSERT INTO employees VALUES
+(1, 'Ravi Kumar', 'IT', 60000, '2023-10-01', 'No', 8),
+(2, 'Pooja Sharma', 'HR', 45000, '2024-03-15', 'Yes', 7),
+(3, 'Amit Singh', 'Finance', 70000, '2022-11-20', 'No', 9),
+(4, 'Surbhi Masih', 'IT', 50000, '2024-02-05', 'No', 6),
+(5, 'Neha Gupta', 'HR', 40000, '2023-12-10', 'Yes', 5);
+
+-- Average salary by department
+SELECT department, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY department;
+
+-- Attrition rate by department
+SELECT department,
+       (SUM(CASE WHEN attrition='Yes' THEN 1 ELSE 0 END)*100.0 / COUNT(*)) AS attrition_rate
+FROM employees
+GROUP BY department;
+
+
