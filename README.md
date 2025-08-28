@@ -55,7 +55,7 @@ GROUP BY department;
 
 🛠️ Tools & Technologies
 
-SQL (MySQL / PostgreSQL / MariaDB) – Data analysis
+SQL (MySQL) – Data analysis
 
 Database Schema Design – HR dataset with employee details
 
@@ -69,12 +69,7 @@ HR shows higher attrition compared to IT and Finance.
 
 Performance scores vary, indicating areas for employee training and retention strategies.
 
-🚀 Future Enhancements
 
-Add employee demographics (age, gender, education) for deeper HR insights.
-
-Track promotion trends and performance over time.
-
-Integrate with Power BI to build interactive HR dashboards.
 
 ✍️ Author: Surbhi Masih
+
